@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(65, 55, 71);
+}
+
+.btnlogClose{
+    width: 200px;
+    height: 50px;
+    color: #fff;   
+    background-color: rgb(65, 55, 71);
+    font-weight: 700;
+    border-radius: 0;
+    text-transform: uppercase;
+    overflow: hidden;
+    border: 2px solid #00ccff;  
+}
+.btnlog{
+    width: 200px;
+    height: 50px;
+    color: #fff;   
+    font-weight: 700;
+    border-radius: 0;
+    background-color: blue;
+    text-transform: uppercase;
+    overflow: hidden;
+    border: 2px solid #00ccff;  
+}
+.alert-danger{
+    color:crimson;
+    background-color: #f8d7da;
+    max-width: 40%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border: 1px solid crimson;
+
+
+}
+.alert-danger{
+    color:crimson;
+    background-color: #f8d7da;
+    max-width: 30%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border: 1px solid crimson;
+  margin: auto;
+  text-align: center;
+}
+.icon-btn,.btn{
+    padding:8px 20px;
+    width: 200px;
+    height: 50px;
+    color: #fff;   
+    background-color: rgb(65, 55, 71);
+    font-weight: 700;
+    border-radius: 0;
+    text-transform: uppercase;
+    margin: 25px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #00ccff;
+}
+.btn::before{
+    content: "";
+    top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(120deg,transparent,#00fffc, transparent);
+transform: translateX(-100%);
+transition: 0.6s;
+position: absolute;
+
+}
+  .icon-btn:hover,.btn:hover{
+    background-color: rgb(65, 55, 71);
+    box-shadow: 0 0 20px 5px #00fffc ;
+    color: #fff;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 2rem;
+
+}
+
+
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+
+}
+
+header .content h4{
+    margin-top: 80px;
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+header .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#00ccff, #d500f9);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 80px;
+    
+}
+
+
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+header .image::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 140%;
+    background-color: wheat;
+    box-shadow: 0 0 20px rgb(8, 8, 8);
+    animation: animate 4s linear infinite;
+
+    
+}
+
+header .image img{
+    content: "";
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 50%;
+    z-index: 2;
+
+
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.skills{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.skills .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card .logo img{
+    width: 90px;
+    height: 60px;
+    margin-bottom: 1rem;
+    display: inline-block;
+
+}
+.card .logo {
+    height: 60px;
+}
+.card .logo img:hover {
+    scale:1.2;
+}
+
+
+.skills .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.skills .card span{
+    display: flex;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+.span2{
+    display: flex;
+    background-color: #af1e1e;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.skills .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.skills .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.skills .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: hand;
+}
+
+.skills .card a:hover{
+    color: #1e40af;
+}
+
+
+
+.aboutncontact{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.aboutncontact .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.aboutncontact .card:hover{
+    background-color: #494848;
+    border-color: #fff;
+}
+
+.aboutncontact .card .content{
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.aboutncontact .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.aboutncontact .card span{
+    display: flex;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.aboutncontact .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.alert-sucess{
+    color:rgb(25, 0, 252);
+    background-color: #f8d7da;
+    max-width: 40%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid rgb(65, 55, 71);
+}
+.aboutncontact .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+
+.content img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 70%;
+    left: 30%;
+
+}
+.content .icon p{
+    margin-top: 15px;
+text-align: center;
+}
+.content .icon:hover {
+    scale:1.2;
+}
+
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#header .hamburger{
+    display: none;
+}
+
+#header .nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+
+
+}
+#header .nav-list ul li{
+    display: inline-block;
+}
+#header .nav-list ul li a{
+    font-size: 1.5rem;
+     color: #fff;
+    font-weight: 900;
+
+}
+#header .nav-list ul a:after{
+    display: none;
+
+}
+#header .nav-list ul li:hover a{
+    color: black;
+}
+#header{
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    top: 0;
+    width: auto;
+    margin-left: 40%;
+
+}
+
+@keyframes humburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    
+}
+
+
+
+@media (width < 900px){
+
+    header .image img{
+        content: "";
+        width: 330px;
+        height: 330px;
+     
+    
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+        width: 350px;
+        height: 350px;
+        margin-top: 40px;
+        margin-left: 90px;
+    }
+    header .content h4{
+        margin-top: 0;
+        
+    }
+    .skills{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .aboutncontact{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content img{
+      
+        left: 29%;
+    
+    }
+    .icon p{
+        font-size: 1rem;
+    }
+    #header{
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        margin-left: 0;
+        
+    }
+    #header .header{
+        min-height: 10vh;
+        background-color: transparent;
+        transition: .3 ease background-color;
+        min-width: 100%;
+       
+    }
+    
+    #header .nav-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    #header .nav-list ul{
+        list-style: none;
+        position: absolute;
+        background-color: rgb(65, 55, 71);
+        width: 100vw;
+        height: 100vh;
+        opacity: .9;
+        left: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: .5 ease left;
+        
+    }
+    #header .nav-list ul.active{
+        left: 0;
+    }
+    
+    #header .nav-list ul a{
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+    
+    }
+    #header .nav-list ul a::after{
+        content: attr(data-after);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0); 
+        color: rgba(216, 218, 241, 0.678);
+        font-size: 5rem;
+        letter-spacing: 50px;
+        z-index: -1;
+        transition: .3s ease letter-spacing;
+    }
+    #header .nav-list ul li:hover a::after{
+        transform: translate(-50%,-50%)scale(1);
+        letter-spacing: initial;
+    }
+    #header .nav-list ul li:hover a{
+        color: black;
+    }
+    #header .hamburger {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+        transform: scale(.8);
+        margin-right: 20px;
+    }
+    #header .hamburger:after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid white;
+        animation: humburger_puls 1s ease infinite;
+    }
+    #header .hamburger .bar{
+        height: 2px;
+        width: 28px;
+        position: relative;
+        background-color: white;
+        z-index: -1;
+    }
+    #header .hamburger .bar::after,
+    #header .hamburger .bar::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: .3 ease;
+        transition-property: top, bottom;
+    }
+    #header .hamburger .bar::after{
+        top: 8px;
+    }
+    #header .hamburger .bar::before{
+        bottom: 8px;
+    }
+    #header .hamburger.active .bar::before{
+        bottom: 0;
+    
+    }
+    #header .hamburger.active .bar::after{
+        top: 0;
+    }
+   
+    
+}
+
+@media (width < 600px){
+   
+    header .image{
+        width: 350px;
+        height: 350px;
+        margin-top: 40px;
+        margin-left: 20px;
+
+        
+    }
+    header .image img{
+        content: "";
+        width: 330px;
+        height: 330px;
+        margin: auto;
+        border-radius: 50%;
+        z-index: 2;
+    
+    }
+
+    .skills{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutncontact{
+        grid-template-columns: repeat(1, 1fr);
+    }
+   
+    .content img{
+        
+        left: 35%;
+    
+    }
+    .icon p{
+        font-size: .9rem;
+    }
+ 
+}

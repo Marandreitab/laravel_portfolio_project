@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(65, 55, 71);
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1000px;
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+.container:hover{
+    box-shadow: 0 0 20px 5px #d500f9;
+    
+}
+.container .title{
+    padding: 25px;
+    color: #fff;
+    background-color: rgb(65, 55, 71);
+}
+
+.container .title p{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title p::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 3px;
+    background: linear-gradient(to right, #00ccff, #d500f9);
+}
+
+
+
+
+.user_details{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.user_details .input_box{
+    width: calc(100% / 2 - 20px);
+    margin: 0 0 12px 0;
+}
+
+.input_box label{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input_box label::after{
+    content: " *";
+    color: red;
+}
+
+.input_box input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f6f8fa;
+    font-family: 'Poppins', sans-serif;
+    transition: all 120ms ease-out 0s;
+}
+.input_box textarea{
+    width: 100%;
+    height: 20vh;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f6f8fa;
+    font-family: 'Poppins', sans-serif;
+    transition: all 120ms ease-out 0s;
+}
+.input_box textarea:focus,
+.input_box textarea:valid{
+    box-shadow: 0px 0px 20px 5px #AC8ECE;
+}
+
+
+.input_box input:focus,
+.input_box input:valid{
+    box-shadow: 0px 0px 20px 5px #AC8ECE;
+}
+
+.btnlogClose{
+    padding: 15px 30px;
+    color: #fff;   
+    background-color: crimson;
+    font-weight: 700;
+    border-radius: 0;
+    text-transform: uppercase;
+    border: 2px solid #00ccff;  
+    cursor: hand;
+    float: left;
+
+
+}
+.btnlog{
+    width: 200px;
+    height: 50px;
+    color: #fff;   
+    font-weight: 700;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: rgb(21, 31, 184);
+    border: 2px solid #00ccff;  
+    cursor: hand;
+    float: right;
+    margin-bottom: 30px;
+}
+.btnlog:hover{
+    box-shadow: 0 0 20px 5px  #d500f9 ;
+   scale:1.1;
+
+}
+
+.buttons{
+    padding: 25px;
+    margin: 15px 0; 
+    margin: auto;  
+}
+
+.user_details{
+    max-height: 340px;
+    overflow-y: scroll;
+}
+.user_details:hover{
+    border: solid #d500f9 ;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin:0;
+}
+img{
+    width: 100px;
+    height:100px ;
+    margin-left: 30%;
+}
+.alert-danger{
+    color:crimson;
+    background-color: #f8d7da;
+    max-width: 40%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid crimson;
+}
+.text-danger{
+    color:crimson;
+    max-width: 40%;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.alert-sucess{
+    color:rgb(25, 0, 252);
+    background-color: #f8d7da;
+    max-width: 40%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid rgb(65, 55, 71);
+}
+
+
+@media screen and (max-width: 584px){
+
+    .user_details{
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .user_details::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .user_details .input_box{
+        width: 100%;
+    }
+    .alert-danger{
+        max-width: 80%;
+    }
+    
+    
+    .alert-sucess{
+        max-width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width: 419px){
+    
+}
